@@ -1,0 +1,14 @@
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\bin\Debug\net6.0\Frame1.exe
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\bin\Debug\net6.0\Frame1.deps.json
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\bin\Debug\net6.0\Frame1.runtimeconfig.json
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\bin\Debug\net6.0\Frame1.dll
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\bin\Debug\net6.0\Frame1.pdb
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.AssemblyInfoInputs.cache
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.AssemblyInfo.cs
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.csproj.CoreCompileInputs.cache
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.dll
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\refint\Frame1.dll
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.pdb
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\Frame1.genruntimeconfig.cache
+C:\Users\nithik.k\source\Traning Phase\Frame1\Frame1\obj\Debug\net6.0\ref\Frame1.dll

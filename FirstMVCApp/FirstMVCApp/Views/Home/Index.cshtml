@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to MVC</h1>
+</div>
+
+<form action="Home/DoLogin">
+    <div>
+        <div>
+            <label for="txtUser">User Name:</label>
+            <input type="text" name="txtUser" required placeholder="Enter UserID" />
+        </div>
+        <div>
+            <label for="txtpwd">Password:</label>
+            <input type="password" name="txtpwd" required placeholder="Enter Password" />
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="Home/SayHello?name=John">SayHello</a>
+</div>
+
+<div>
+    <a href="Home/Add?x=10&y=10">Add</a>
+</div>
+<div>
+    <a href="Home/Substract?x=10&y=10">Substract</a>
+</div>
+<div>
+    <a href="Home/Multiply?x=10&y=10">Multiply</a>
+</div>
+<div>
+    <a href="Home/Divide?x=10&y=10">Divide</a>
+</div>
+<div>
+    <a href="Home/AddNewBook">NewBook</a>
+</div>
+<div>
+    <a href="Home/ListAllBook">All Book</a>
+</div>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+    var all_route_parms = new Dictionary<string, string>
+    {
+        {"x", "200"}, {"y", "50"}
+    };
+}
+
+<div>
+    <a asp-action="Add" asp-controller="Calculator" asp-route-x="258" asp-route-y="6">Call Add asp-route</a>
+</div>
+
+<div>
+    <a asp-action="Add" asp-controller="Calculator" asp-all-route-data="all_route_parms">Call Add all_route_parms</a>
+</div>
+<!--HTMLHelper-->
+@await Html.PartialAsync("ChildList");

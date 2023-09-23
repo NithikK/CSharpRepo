@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "FindOrderByID";
+}
+@model List<int>
+<h1>FindOrderByID</h1>
+<hr />
+<div>
+    <form method="get" asp-action="Details" asp-controller="Order">
+        <label for="FindOrder">Find Order ID : </label>
+        <select id="FindOrder" name="id">
+            <option value=""> Select an OrderID </option>
+            @foreach(var orderId in Model)
+            {
+                <option value="@orderId">@orderId</option>
+            }
+        </select>
+        <input type="submit" name="btnsubmit" value="FindID" />
+    </form>
+</div>
+<hr />
+

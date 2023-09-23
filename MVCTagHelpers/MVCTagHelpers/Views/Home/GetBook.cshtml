@@ -1,0 +1,17 @@
+﻿@using MVCTagHelpers.Models //Importing namespace inside a webpage
+@{
+    ViewData["Title"] = "GetBook";
+}
+
+<h1>GetBook</h1>
+<div>
+    @{
+        Book b1 = (Book)ViewData["book"];
+        //}
+        /*@*/
+        if (b1 != null)//commented one can also be used
+            @b1.AuthorName
+        else {   <strong>Book is NULL</strong>}
+    }
+</div>
+@Html.ActionLink("Back to Index","Index")
