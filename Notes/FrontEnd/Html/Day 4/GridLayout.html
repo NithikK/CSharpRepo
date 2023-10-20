@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="" />
+    </head>
+    <style>
+        body{
+            background-color: black;
+            color: lightblue;
+        }
+        input{
+            color: lightblue;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        div:nth-child(1){
+            background-color: maroon;
+        }
+        div:nth-child(2){
+            background-color: lightcoral;
+        }
+        div:nth-child(3){
+            background-color: lime;
+        }
+        div:nth-child(4){
+            background-color: limegreen;
+        }
+        div:nth-child(5){
+            background-color: lightseagreen;
+        }
+        #grid1{
+            /*
+            display: grid;
+            grid-template-columns: 110px 110px 110px;
+            grid-auto-rows: 100px 100px 100px;
+            */
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-rows: 100px 100px 100px;
+            grid-auto-columns: 100px 100px 100px;
+            grid-gap: 4px;
+            grid-auto-flow: column;
+        }
+    </style>
+    <body>
+        <div id="grid1">
+            <div>Div1</div><!--If only text is there go for column layout if div pre or span since they are block by default-->
+            <div>Div2</div>
+            <div>Div3</div>
+            <div>Div4</div>
+            <div>Div5</div>
+            <input type="button" value="click" style="background-color: limegreen;"/>
+            <input type="button" value="click" style="background-color: lime;"/>
+            <input type="text" placeholder="Enter name" style="background-color: lightcoral;" />
+            <input type="submit" value="Add" style="background-color: maroon;" />
+        </div>
+    </body>
+</html>

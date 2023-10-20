@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function checkFirstName(){
+            var fname = document.forms[0].firstName.value;
+            if (fname== ""){
+                //window.alert("First Name is Mandatory");
+                var nerror=document.getElementById("nameerror");
+                nerror.style.fontWeight="bold";
+                nerror.style.fontFamily="italic";
+                nerror.innerHTML="First Name is Mandatory";
+                //document.forms[0].firstName.focus();//Makes the firstName field active
+            }
+        }
+        function checkAge(){
+            var age = document.forms[0].Age.value;
+            var aerror=document.getElementById("ageerror");
+            aerror.style.fontWeight="bold";
+            aerror.style.fontFamily="italic";
+            if(age>=1 && age<18){
+                aerror.innerHTML="Age Should be more than 18";
+            }
+            else if(age>60){
+                aerror.innerHTML="Age Should be lesser than 60";
+            }
+            else{
+                aerror.innerHTML="Age is Mandatory";
+            }
+        }
+    </script>
+    <body>
+        <center>
+            <form action="#" novalidate>
+                <label>Employee Id : </label><input type="text" name="employeeID" placeholder="EmpID" value="100" readonly/><br><br>
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your name" required maxlength="5" minlength="5" onblur="checkFirstName()" />
+                <label style="color: red;" id="nameerror"></label><br><br>
+                <label>Age : </label><input type="number" min="18" max="60" name="Age" onblur="checkAge()">
+                <label style="color: red;" id="ageerror"></label>
+                <br><br>
+                <label>Preferred Volume : </label><br>
+                <input type="range"  name="volume" min="10" max="10000" style="width: 200;" oninput="updateVolume()"/>
+                <input type="text" name="volLevel" value="50%" style="width: 60px; height: 15px" readonly/>
+                <br><br>
+                <label>Date Of Joining : </label><input type="date" name="joinDate" min="1998-03-31" max="2023-09-26" /><br><br>
+                <label>Project Start Date : </label><input type="date" name="ProjectDate"/><br><br>
+                <label>Upload your resume : </label><input type="file" name="resume" accept="audio/mp3, audio/mpeg, audio/*"/><br><br>
+                <input type="submit" value="Save" />&nbsp;&nbsp;
+                <input type="reset" value="reset"/>
+            </form>
+            <script>
+                function updateVolume(){
+                    document.forms[0].volLevel.value = document.forms[0].volume.value /100 +"%";//forms[0] means first form 
+                }
+            </script>
+        </center>
+    </body>
+</html>

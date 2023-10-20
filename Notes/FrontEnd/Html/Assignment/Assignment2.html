@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <center>
+            <form action="Assignment2.html" id="UserForm">
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your FirstName" required maxlength="10" minlength="5"/><br><br>
+                <label for="lname">Last Name : </label>
+                <input type="text" name="lastName" placeholder="Enter your LastName" required maxlength="10" minlength="5"/><br><br>
+                <label>Address : </label><input type="text" min="6" max="60" name="address"><br><br>
+                <label>Phone No. : </label><input type="text" min="10" max="11" name="phoneNumber"><br><br>
+                <label>Email : </label><input type="email" name="email"><br><br>
+                <button type="button" onclick="addData()">Add</button>
+                <button type="button" onclick="retrieveData()">Get</button>
+            </form>
+            <hr/>
+            <div>
+                <table id="result" align="center" border="5px" style="border-style:groove; border-color:lightslategray; border-radius:4px">
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Address</th>
+                        <th>PhoneNumber</th>
+                        <th>Email</th>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <script>
+                function addData(){
+                    var firstName = document.forms[0].firstName.value;
+                    var lastName = document.forms[0].lastName.value;
+                    var address = document.forms[0].address.value;
+                    var phone = document.forms[0].phoneNumber.value;
+                    var email = document.forms[0].email.value;
+                    const UserData = {
+                        firstName,
+                        lastName,
+                        address,
+                        phone,
+                        email
+                    };
+                    sessionStorage.firstName = UserData.firstName;
+                    sessionStorage.lastName = UserData.lastName;
+                    sessionStorage.address = UserData.address;
+                    sessionStorage.phoneNumber = UserData.phone;
+                    sessionStorage.email = UserData.email;
+                    const tableData = JSON.parse(sessionStorage.getItem("UserDatas")) || [];
+                    tableData.push(UserData);
+                    sessionStorage.setItem("UserDatas", JSON.stringify(tableData));
+                    alert("Data has been Successfully Added");
+                    clearForm();
+                }
+                function clearForm() {
+                    document.getElementById("UserForm").reset();
+                }
+                function retrieveData() {
+
+                    const storedData = JSON.parse(sessionStorage.getItem("UserDatas")) || [];
+                    const table = document.getElementById("result");
+                    while (table.rows.length > 1) {
+                        table.deleteRow(1);
+                    }
+                    for (const data of storedData) {
+                        displayData(data);
+                    }
+                }
+                function displayData(data) {
+                    const table = document.getElementById("result");
+                    const row = table.insertRow(-1);
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    const cell3 = row.insertCell(2);
+                    const cell4 = row.insertCell(3);
+                    const cell5 = row.insertCell(4);
+                    cell1.innerHTML = data.firstName;
+                    cell2.innerHTML = data.lastName;
+                    cell3.innerHTML = data.address;
+                    cell4.innerHTML = data.phone;
+                    cell5.innerHTML = data.email;
+                }
+            </script>
+        </center>
+    </body>
+</html>

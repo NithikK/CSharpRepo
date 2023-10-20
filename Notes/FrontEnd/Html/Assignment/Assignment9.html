@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <form>
+
+        </form>
+        <div id="disc"></div>
+        <script>
+            var dict=[];
+            var textfield = document.createElement('input');
+            textfield.type='text';
+            textfield.placeholder='Enter Machine Name';
+            textfield.width=100;
+            textfield.height=40;
+            document.forms[0].appendChild(textfield);
+    
+            var numfield = document.createElement('input');
+            numfield.type='number';
+            numfield.placeholder='Enter IP Address';
+            numfield.width=100;
+            numfield.height=40;
+            document.forms[0].appendChild(numfield);
+
+            textfield.addEventListener("change", function() {
+                dict[textfield.value] = numfield.value;
+            });
+            numfield.addEventListener("change", function() {
+                dict[textfield.value] = numfield.value;
+                Update();
+            });
+           function Update(){
+                var dictionary=document.getElementById("disc");
+                dictionary.innerHTML("");
+                for(item in dict){
+                    dictionary.innerHTML(item + " : " + dict[item] + "<br>");
+                }
+            }
+        </script>
+    </body>
+</html>

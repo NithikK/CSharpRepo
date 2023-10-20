@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <table border=1px style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>Num1</th>
+            <th>Num2</th>
+        </tr>
+    <script>
+        function text(num1, num2){ //definition of the function
+            document.writeln("<tr>");
+            document.writeln("<td>" + Math.sqrt(num1) + "</td>");
+            document.writeln("<td>" + Math.sqrt(num2) + "</td>");
+            document.writeln("</tr>");
+        }
+        text(100,400);//funtion call
+        text(9,16);
+        document.writeln("</table>");
+        var validate=(age) => { //var validate = function(age)
+            if(age <= 18 || age >=60){
+                document.writeln("<b>Not Eligible for  job ...</b>");
+            }
+            else{
+                document.writeln("<b>Eligible for  job ...</b>");
+            }
+        }
+        validate(22);
+        var calc= new Function ("(num1, num2)","{ document.writeline(num1 * num2); document.writeline(num1 + num2);}");
+        /*Actual function
+            function calc(num1, num2){
+                document.writeline(num1 * num2);
+                document.writeline(num1 + num2);
+            }
+        */
+        calc(2,2);//Normal Function
+        var sum = new Function ("num1, num2","return num1 + num2;");
+        var res = sum(100,200);//Normal Function
+        document.writeln("<br>Res = " + res + "<br>");
+    </script>
+    <body>
+
+    </body>
+</html>

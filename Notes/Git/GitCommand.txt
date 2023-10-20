@@ -1,0 +1,20 @@
+git clone https://github.com/NithikK/WorldCup2023.git
+
+git clone https://github.com/NithikK/Timepass.git
+
+--get the current status of repository
+git status
+
+--To add new files to repository
+git add .
+
+--To commit all changes xyz is any name 
+git commit -m "xyz"
+
+--To upload new and modified files to cloud repository from local repository
+git push
+
+--Non commited things are in stack
+git pull
+
+	

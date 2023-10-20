@@ -1,0 +1,78 @@
+.rotate{
+    text-wrap: nowrap;
+    text-align: justify;
+    vertical-align: middle;
+    transform: rotate(270deg);
+    max-width: 1cm;
+}
+image{
+    display: block;
+}
+table, th, td{
+    border-collapse: collapse;
+    width: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+.glossy-button{
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0073e6, #00b3ff);
+    border: 1px #0159b1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.glossy-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+.dotted{
+    border-style: dotted;
+}
+.dashed{
+    border-style: dashed;
+}
+th.blue{
+    color: blue;
+}
+input.blue{
+    border-color: blue;
+}
+.red{
+    border-color: red;
+}
+.purple{
+    border-color: violet;
+}
+#month{
+    color: maroon;
+}
+font{
+    background-color: goldenrod;
+    text-align: left;
+}
+#month font{
+    background-color: violet;
+}
+input{
+    color: violet;
+}
+#head{
+    color: darkred;
+    text-align: left;
+}
+.indent{
+    padding-left: 2%;
+}

@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            var evt = new Event("count");
+            var counter=0;
+            function countAndShow(){
+                setInterval(
+                function(){
+                    counter++;
+                    document.getElementById("cnt").value = counter;
+                }, 1000);
+            }
+            document.addEventListener("count", countAndShow);
+
+            function startCounting(){
+                document.dispatchEvent(evt);
+            }
+        </script>
+        <center>
+            ID : <input type="number" min="1" max="1000000" id="cnt" readonly/><br><br>
+            <input type="button" value="GenerateID" onclick="startCounting()"/>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <center>
+            <form action="UserForm2.html" onsubmit="saveData(); return false;">
+                <label>Employee Id : </label><input type="text" name="employeeID" placeholder="EmpID" value="100"/><br><br>
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your name" required maxlength="5" minlength="5"/><br><br>
+                <label>Age : </label><input type="number" min="18" max="60" name="age">
+                <br><br>
+                <input type="submit" value="Save" />&nbsp;&nbsp;
+                <input type="reset" value="reset"/>
+            </form>
+            <h2 id="result">_________________________</h2>
+            <script>
+                function saveData(){
+                    var empID = document.forms[0].employeeID.value;
+                    var name = document.forms[0].firstName.value;
+                    var age = document.forms[0].age.value;//faster than getelementbyid()
+                    console.log(empID + "\t\t" + name + "\t\t" + age + "\t\t" );
+                    //sessionStorage.employeeID = empID;
+                    localStorage.employeeID = empID;//for localstorage no neeed for JSON parse
+                    //sessionStorage.firstName = name;
+                    localStorage.firstName = name;
+                    //sessionStorage.age = age;
+                    localStorage.age = age;
+                    if(empID != null && name != null && age != null){
+                        document.getElementById("result").innerHTML = empID + "\t\t" + name + "\t\t" + age + "\t\t";
+                    }
+                }
+            </script>
+        </center>
+    </body>
+</html>

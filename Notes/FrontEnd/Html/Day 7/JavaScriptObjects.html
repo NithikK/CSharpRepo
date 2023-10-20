@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <table border= 2px style="border-collapse: collapse;">
+            <tr>
+                <th>EmpID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+            <script>
+                //Associative array
+                var dict=[];
+                //India, USA, Japan are Keys
+                dict["India"] = "New Delhi";
+                dict["USA"] = "Washington";
+                dict["Japan"] = "Tokyo";
+                for(item in dict){
+                    document.writeln("Capital of " + item + " is " + dict[item] + "<br>");
+                }
+
+                var obj =  new Object();//First Method to create Objects in JS
+                obj.empID = 100;//empID is Key and 100 is value//Key-Value pair
+                obj.firstName = "Reaper";
+                obj.lastName = "Carnage";
+                document.writeln("<tr>");
+                document.writeln("<td>" + obj.empID + "</td>");
+                document.writeln("<td>" + obj["firstName"] + "</td>");
+                document.writeln("<td>" + obj.lastName + "</td>");
+                document.writeln("</tr>");
+                obj.getFirstName=function (){return this.firstName};
+                obj.getLastName=function (){return this.lastName};
+                document.writeln("First Name - " + obj.getFirstName());
+            </script>
+        </table>
+    </body>
+</html>

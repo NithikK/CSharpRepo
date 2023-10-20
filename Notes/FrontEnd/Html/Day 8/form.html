@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+});
+        function checkFirstName(){
+            var fname = document.forms[0].firstName.value;
+            if (fname== ""){
+                //window.alert("First Name is Mandatory");
+                var nerror=document.getElementById("nameerror");
+                nerror.style.fontWeight="bold";
+                nerror.style.fontFamily="italic";
+                nerror.innerHTML="First Name is Mandatory";
+                //document.forms[0].firstName.focus();//Makes the firstName field active
+            }
+        }
+        function checkAge(){
+            var age = document.forms[0].Age.value;
+            var aerror=document.getElementById("ageerror");
+            aerror.style.fontWeight="bold";
+            aerror.style.fontFamily="italic";
+            if(age>=1 && age<18){
+                aerror.innerHTML="Age Should be more than 18";
+            }
+            else if(age>60){
+                aerror.innerHTML="Age Should be lesser than 60";
+            }
+            else{
+                aerror.innerHTML="Age is Mandatory";
+            }
+        }
+        function checkDOJ(){
+            var DOJ = document.forms[0].joinDate.value;
+            var dojerror=document.getElementById("dojerror");
+            dojerror.style.fontWeight="bold";
+            dojerror.style.fontFamily="italic";
+            if( DOJ != "" && DOJ < "1998-03-31"){
+                dojerror.innerHTML="Joining Date Must be after the company the date the company started";
+            }
+            else if(Date.parse(DOJ) > Date.now()){
+                dojerror.innerHTML="Joining Date must not be Greater than Today";
+            }
+            else if(DOJ == ""){
+                dojerror.innerHTML="Joining Date is Mandatory";
+            }
+        }
+        function checkDOP(){
+            var DOP = document.forms[0].ProjectDate.value;
+            var DOJDate = document.forms[0].joinDate.value;
+            if(DOJDate == ""){
+                checkDOJ();
+            }
+            var doperror=document.getElementById("doperror");
+            doperror.style.fontWeight="bold";
+            doperror.style.fontFamily="italic";
+            if( DOP != "" && DOP < DOJDate){
+                doperror.innerHTML="Project Date Must be after Joining Date";
+            }
+            else if(Date.parse(DOP) > Date.now()){
+                doperror.innerHTML="Project Date must not be Greater than Today";
+            }
+            else if(DOP == ""){
+                doperror.innerHTML="Project Date is Mandatory";
+            }
+        }
+        function clearNameError(){
+            document.getElementById("nameerror").innerHTML="";
+        }
+        function clearAgeError(){
+            document.getElementById("ageerror").innerHTML="";
+        }
+        function confirmReset(){
+            var status=confirm("Want to reset and lose the data ?");
+            console.log(status);
+            return status;
+        }
+        function enableSave(){
+            var v = document.getElementsByName("saveStatus");
+            document.getElementById("save").disabled = !v[0].checked;
+        }
+    </script>
+    <body>
+        <center>
+            <form action="#" novalidate onreset="return confirmReset()">
+                <label>Employee Id : </label><input type="text" name="employeeID" placeholder="EmpID" value="100" readonly/><br><br>
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your name" required maxlength="5" minlength="5" onblur="checkFirstName()" onfocus="clearNameError()"/>
+                <label style="color: red;" id="nameerror"></label><br><br>
+                <label>Age : </label><input type="number" min="18" max="60" name="Age" onblur="checkAge()" onfocus="clearAgeError()"/>
+                <label style="color: red;" id="ageerror"></label>
+                <br><br>
+                <label>Preferred Volume : </label><br>
+                <input type="range"  name="volume" min="10" max="10000" style="width: 200;" oninput="updateVolume()"/>
+                <input type="text" name="volLevel" value="50%" style="width: 60px; height: 15px" readonly/>
+                <br><br>
+                <label>Date Of Joining : </label><input type="date" name="joinDate" min="1998-03-31" max="2023-09-26" onblur="checkDOJ()"/>
+                <label style="color: red;" id="dojerror"></label><br><br>
+                <label>Project Start Date : </label><input type="date" name="ProjectDate" onblur="checkDOP()"/>
+                <label style="color: red;" id="doperror"></label><br><br>
+                <label>Upload your resume : </label><input type="file" name="resume" accept="audio/mp3, audio/mpeg, audio/*"/><br><br>
+                <label>Email : </label><input type="email" name="email"/><br><br>
+                <input type="checkbox" name="saveStatus" onclick="enableSave()"/>Agree to Terms & Conditions<br><br>
+
+                <input type="submit" value="Save" id="save" disabled />&nbsp;&nbsp;
+                <input type="reset" value="reset"/>
+            </form>
+            <script>
+                function updateVolume(){
+                    document.forms[0].volLevel.value = document.forms[0].volume.value /100 +"%";//forms[0] means first form 
+                }
+            </script>
+        </center>
+    </body>
+</html>

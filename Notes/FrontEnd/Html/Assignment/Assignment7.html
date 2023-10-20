@@ -1,0 +1,39 @@
+<html>
+    <style>
+        body{
+            background-color: black;
+            color: lightblue;
+        }
+        hr{
+            color: lightblue;
+        }
+    </style>
+    <script>
+        var arr1=[100, "Abc", "xdv", "dgh", 78, 45.67, 78, "Abc"];
+        var arr2=[100, 400, "fgh", 67.78, 31];
+        function Dupli(arr){
+            var arr = arr.filter(function(item, index, inputArray) {
+                return inputArray.indexOf(item) === index;
+            });
+            return arr;
+        }
+        function Merge(arr1, arr2){
+            var arr = arr1.concat(arr2);
+            arr = Dupli(arr);
+            document.writeln("<br>Merged Array : " + arr);
+        }
+    </script>
+    <body>
+        <h1>To eleminate Duplicates in an Array</h1>
+        <script>
+            var arr = Dupli(arr1);
+            document.writeln("<br>Array : " + arr);
+        </script>
+        <hr />
+        <h1>Merge Two Arrays without Duplicates</h1>
+        <script>
+            //delete arr[2]; can also be used but doesnt remove comma
+            Merge(arr1,arr2);
+        </script>
+    </body>
+</html>

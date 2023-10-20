@@ -1,0 +1,19 @@
+
+body{
+    background-color: black;
+    text-align: center;
+    color: lightblue;
+}
+#pic{
+    width: auto;
+    height: auto;
+    max-width: 75%;
+    max-height: 75%;
+    display: block;
+}
+form{
+    background: lightslategray;
+    display: inline-block;
+    padding: 2%;
+    
+}

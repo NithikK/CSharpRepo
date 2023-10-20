@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj": {}
+    "C:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj": {}
   },
   "projects": {
-    "c:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj": {
+    "C:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj",
+        "projectUniqueName": "C:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj",
         "projectName": "NorthWindMVC",
-        "projectPath": "c:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj",
+        "projectPath": "C:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\NorthWindMVC.csproj",
         "packagesPath": "C:\\Users\\nithik.k\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\obj\\",
+        "outputPath": "C:\\Users\\nithik.k\\source\\Traning Phase\\NorthWindMVC\\NorthWindMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nithik.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

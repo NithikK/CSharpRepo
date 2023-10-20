@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css" />
+        <title>Html SVG</title>
+    </head>
+    <body>
+        <svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+        xmlns="http://www.w3.org/2000/svg" version="1.1"><!--istead of cm px can also be given keep in mind that 100px = 1cm -->
+        <desc>Example rect01 - rectangle with sharp corners</desc>
+        <!-- Show outline of viewport using 'rect' element -->
+        <rect x="1" y="1" width="1198" height="398"
+        fill="lightblue" stroke="blue" stroke-width="10"/>
+        <rect x="400" y="100" width="400" height="200"
+        fill="yellow" stroke="gold" stroke-width="10"  />
+        <g transform="translate(700 210) rotate(-30)">
+            <rect x="0" y="0" width="400" height="200" rx="50"
+            fill="none" stroke="purple" stroke-width="30"  />
+        </g>
+    </svg>
+    </body>
+</HTML>

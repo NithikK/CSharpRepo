@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: lightblue;
+}
+div{
+    text-align: center;
+    font-size: 70px;
+}
+.box{
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    border: 1px groove lightblue;
+    color: black;
+    background-color: white;
+    font-size: 70px;
+    animation: box 0.5s ease infinite;
+}
+.dash {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: lightblue;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+@keyframes box {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}

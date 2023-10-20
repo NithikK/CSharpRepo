@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <center>
+            <form action="LocalStorage.html" onsubmit="saveData(); return false;">
+                <label>Employee Id : </label><input type="text" name="employeeID" placeholder="EmpID" value="100"/><br><br>
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your name" required maxlength="5" minlength="5"/><br><br>
+                <label>Age : </label><input type="number" min="18" max="60" name="age">
+                <br><br>
+                <legend>
+                    Select Gender : <br>
+                    <input type="radio" name="Gender" value="M" /> Male <br>
+                    <input type="radio" name="Gender" value="F" /> Female <br>
+                </legend>
+
+                <b>Hobbies</b><br>
+                <legend>
+                    <input type="checkbox" name="hobbies" value="Baseball" /> Baseball <br>
+                    <input type="checkbox" name="hobbies" value="Music" /> Music <br>
+                    <input type="checkbox" name="hobbies" value="Movies" /> Football <br>
+                </legend>
+                <input type="submit" value="Save" />&nbsp;&nbsp;
+                <input type="reset" value="reset"/>
+            </form>
+            <h2 id="result">Result Will Be Displayed Here</h2>
+            <script>
+                function saveData(){
+                    var empID = document.forms[0].employeeID.value;
+                    var name = document.forms[0].firstName.value;
+                    var age = document.forms[0].age.value;//faster than getelementbyid()
+                    var gender = document.forms[0].Gender.value;
+                    var hobby = document.forms[0].hobbies.value;
+                    localStorage.employeeID = empID;//for localstorage no neeed for JSON parse
+                    localStorage.firstName = name;
+                    localStorage.age = age;
+                    if(empID != null && name != null && age != null){
+                        document.getElementById("result").innerHTML = "EmpID : " + empID + "<br>" + "Name : " + name + "<br>" + "Age : " + age + "<br>" + "Gender : " + gender + "<br>" + "Hobby : " + hobby;
+                    }
+                }
+            </script>
+        </center>
+    </body>
+</html>

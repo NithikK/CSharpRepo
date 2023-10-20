@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <center>
+            <form action="#">
+                <label>Employee Id : </label><input type="text" name="employeeID" placeholder="EmpID" value="100" readonly/><br><br>
+                <label for="fname">First Name : </label>
+                <input type="text" name="firstName" placeholder="Enter your name" required maxlength="5" minlength="5"/><br><br>
+                <label>Age : </label><input type="number" min="18" max="60">
+                <br><br>
+                <label>Preferred Volume : </label><br>
+                <input type="range"  name="volume" min="10" max="10000" style="width: 200;" oninput="updateVolume()"/>
+                <input type="text" name="volLevel" value="50%" style="width: 60px; height: 15px" readonly/>
+                <br><br>
+                <label>Date Of Joining : </label><input type="date" name="joinDate" min="1998-03-31" max="2023-09-26" /><br><br>
+                <label>Upload your resume : </label><input type="file" name="resume" accept="audio/mp3, audio/mpeg, audio/*"/><br><br>
+                <input type="submit" value="Save" />&nbsp;&nbsp;
+                <input type="reset" value="reset"/>
+            </form>
+            <script>
+                function updateVolume(){
+                    document.forms[0].volLevel.value = document.forms[0].volume.value /100 +"%";//forms[0] means first form 
+                }
+            </script>
+        </center>
+    </body>
+</html>

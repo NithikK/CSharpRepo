@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var arr=["Techi", 100, 200, 300, 21.87, true, "Chennai", 200];
+        document.writeln("<hr />");
+        for(i in arr){
+            document.writeln(arr[i] + " @ " + i + "<br>");
+        }
+        document.writeln("<hr />");
+        for(i of arr){
+            document.writeln(i + "<br>");
+        }
+        document.writeln("<hr />");
+        document.writeln("Length : " + arr.length);
+        document.writeln("<hr />");
+        arr.sort();
+        document.writeln("Sorted Array : " + arr);
+        document.writeln("<hr />");
+        arr.reverse();
+        document.writeln("Reversed Array : " + arr);
+        document.writeln("<hr />");
+        var v = arr.indexOf(200);//indexOf("Techi");
+        if(v == -1){
+            document.writeln("<b>Element Not Found</b>");
+        }
+        else{
+            document.writeln("<b>Element Found @ " + v + " position...</b>");
+        }
+        document.writeln("<hr />");
+        document.writeln("Array : " + arr.join("..."));
+        document.writeln("<hr />");
+        arr.push(800);//only push and pop is supported peek is not supported 
+        document.writeln("Array : " + arr.join("..."));
+        document.writeln("<hr />");
+    </script>
+    <body>
+
+    </body>
+</html>

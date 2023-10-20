@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css" />
+        <title>Html SVG</title>
+    </head>
+    <body>
+        <div class="field">
+        <div id="draggable" class="player">
+            <svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+            xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <rect x="1" y="1" width="500" height="100"
+                fill="yellow" stroke="gold" stroke-width="10"/>
+            </svg>
+        </div>
+        <div class="ball">
+            <svg width="50" height="50">
+                <circle cx="25" cy="25" r="20" fill="lightblue" />
+            </svg>
+        </div>
+        <div id="draggable" class="player">
+            <svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+            xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <rect x="1" y="1" width="500" height="100"
+                fill="yellow" stroke="gold" stroke-width="10"/>
+            </svg>
+        </div>
+        </div>
+
+        <script>
+            // JavaScript code for making the SVG shape draggable
+            const svg = document.getElementById('draggable');
+            const container = document.getElementsByClassName('container');
+            
+            let isDragging = false;
+            let offset = { x: 0, y: 0 };
+            
+            svg.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offset.x = e.clientX - svg.getBoundingClientRect().left;
+                offset.y = e.clientY - svg.getBoundingClientRect().top;
+                svg.style.cursor = 'grabbing';
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const x = e.clientX - container.getBoundingClientRect().left - offset.x;
+                const y = e.clientY - container.getBoundingClientRect().top - offset.y;
+                
+                svg.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                svg.style.cursor = 'grab';
+            });
+        </script>
+
+    </body>
+</HTML>

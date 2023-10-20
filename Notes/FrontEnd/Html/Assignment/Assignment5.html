@@ -1,0 +1,38 @@
+<html>
+    <style>
+        body{
+            background-color: black;
+            color: lightblue;
+        }
+        hr{
+            color: lightblue;
+        }
+    </style>
+    <script>
+        var arr=[100, "Abc", "xdv", "dgh", 78, 45.67];
+        function Desc(arr){
+            arr.sort();
+            arr.reverse();
+            document.writeln("<br>Array : " + arr);
+        }
+        function Delete(element){
+            document.writeln("<br>Original Array : " + arr);
+            var i = arr.indexOf(element);
+            document.writeln(i);
+            arr.splice(i, 1);
+            document.writeln("<br>Array : " + arr);
+        }
+    </script>
+    <body>
+        <h1>Descending order of an Array</h1>
+        <script>
+            Desc(arr);
+        </script>
+        <hr />
+        <h1>Delete a given element in Array</h1>
+        <script>
+            //delete arr[2]; can also be used but doesnt remove comma
+            Delete("xdv");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+div{
+    background-color: aqua;
+    width: 200px;
+    height: 300px;
+}
+div:hover{
+    background-color: darkmagenta;
+    width: 500px;
+    height: 500px;
+}
+a:link{
+    color: red;
+    cursor:grabbing;
+}
+a:visited{
+    color: darkorange;
+    cursor:progress;
+}

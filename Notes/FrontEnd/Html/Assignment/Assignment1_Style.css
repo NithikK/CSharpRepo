@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+    background-image:url("Space.jpg");
+    color: lightblue;
+}
+h1{
+    text-align: center;
+}
+.TableRegion{
+    text-align: center;
+    display: inline;
+    height: auto;
+    width: auto;
+}
+.rotate{
+    transform:rotate(90deg);
+}
+.image{
+    text-align: center;
+    display: inline;
+    height: auto;
+    width: auto;
+}
+.Hobby{
+    display: block; 
+    height: auto;
+    width: auto;    
+}
+.Details{
+    text-align: center;
+    align-content: center;
+    display: block; 
+    height: auto;
+    width: auto;
+}
+video{
+    width: 500px;
+    height: 500px;
+}

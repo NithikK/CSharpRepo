@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta http-equiv="refresh" content="1">
+    </head>
+    <body>
+        <h1>First Javascript Example</h1>
+        <script>
+            var vcount=0;
+            vcount++;
+            document.writeln("<b>" + vcount + "</b><br>");
+        </script>
+        <u>Underlined text</u><br>
+        <script>
+            function pad(number) {
+                    if (number < 10) {
+                        return "0" + number;
+                    } else {
+                        return number;
+                    }
+            }
+            var now = new Date();
+            var hr = pad(now.getHours());
+            var min = pad(now.getMinutes());
+            var sec = pad(now.getSeconds());
+            document.writeln("Today's Date : " + hr + " : " + min + " : " + sec);
+        </script>
+    </body>
+</html>

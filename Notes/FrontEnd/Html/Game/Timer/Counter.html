@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta http-equiv="refresh" content="1">
+        <link rel="stylesheet" href="time.css" />
+    </head>
+    <body>
+        <h1>Time</h1>
+        <script>
+            function pad(number) {
+                if (number < 10) {
+                    return "0" + number;
+                } else {
+                    return number;
+                }
+            }
+            var now = new Date();
+            var hr = pad(now.getHours());
+            var min = pad(now.getMinutes());
+            var sec = pad(now.getSeconds());
+            document.writeln("<div><span class='box'><span class='dash'></span>" + hr + "</span> : <span class='box'><span class='dash'></span>" + min + "</span> : <span class='box'><span class='dash'></span>" + sec + "</span></div>");
+        </script>
+    </body>
+</html>

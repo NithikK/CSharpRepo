@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script type="text/javascript" lang="javascript">
+            cities=["Chennai", "Bangalore", "Hyderabad", "Mumbai", "Ranchi", "Patna", "Pune"];
+            document.writeln(cities.length);
+            document.writeln(cities);
+            for (const i in cities) {
+                document.writeln(cities[i] + "<br>")
+            }
+            document.writeln("<BR>I OF : <BR>")
+            for (const i in cities) {
+                document.writeln(i + "<br>")
+            }
+            cities[9] = "Chandigarh";
+            cities[11] = "New Delhi"; 
+            cities[13] = 300;
+            document.writeln("Cities : " + cities);
+            cities.sort();
+            document.writeln("<br>Cities : <br>" + cities);
+            cities.reverse();
+            document.writeln("<br>Cities : <br>" + cities);
+        </script>
+    </body>
+</html>

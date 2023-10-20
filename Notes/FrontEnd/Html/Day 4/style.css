@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+}
+/*Accessing child */
+div > u {
+    color: pink;
+}
+div > i {
+    color: darkred;
+}
+div > i :nth-child(1){
+    color: blueviolet;
+}
+/*
+div > i > me {
+    color: blueviolet;
+}*/
+div > :first-child{
+    background-color: lemonchiffon;
+    color: blueviolet;
+
+}
+div > div :last-child{
+    border: 4px;
+    border-style: groove;
+    border-radius: 5%;
+    border-color: black;
+}
+div > :nth-child(6){
+    color: blueviolet;
+}
+div > div > p {
+    color: blueviolet;
+}
